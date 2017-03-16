@@ -2,7 +2,7 @@
  * Copyright (C), 2015-2016
  * File Name: @(#)
  * Encoding UTF-8
- * Author: haibo.zhu
+ * Author: haibo
  * Version: 1.0
  * Date: 
  */
@@ -31,7 +31,7 @@ import java.util.Map;
  * <p>
  * <a href=""><i>View Source</i></a>
  *
- * @author haibo.zhu
+ * @author haibo
  * @version 1.0
  * @since 1.0
  */

@@ -2,7 +2,7 @@
  * Copyright (C), 2015-2016
  * File Name: @(#)haibo
  * Encoding UTF-8
- * Author: haibo.zhu
+ * Author: haibo
  * Version: 1.0
  * Date: 2016-09-06
  */
@@ -19,7 +19,7 @@ import java.util.*;
  * <p>
  * <a href="haibo"><i>View Source</i></a>
  *
- * @author haibo.zhu
+ * @author haibo
  * @version 1.0
  * @since 1.0
  */
