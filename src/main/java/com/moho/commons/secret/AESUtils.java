@@ -6,7 +6,7 @@
  * Version: 1.0
  * Date: 2017-03-27
  */
-package com.moho.commons.des;
+package com.moho.commons.secret;
 
 import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;
@@ -46,8 +46,8 @@ public final class AESUtils {
         KeyGenerator gen = KeyGenerator.getInstance(AES);
         gen.init(128, new SecureRandom(key));
         SecretKey secretKey = gen.generateKey();
-        byte[] enCodeFormat = secretKey.getEncoded();
-        SecretKeySpec spec = new SecretKeySpec(enCodeFormat, AES);
+        byte[] encoded = secretKey.getEncoded();
+        SecretKeySpec spec = new SecretKeySpec(encoded, AES);
         // 创建密码器
         Cipher cipher = Cipher.getInstance(AES);
         // 初始化

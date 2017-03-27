@@ -8,8 +8,8 @@
  */
 package com.moho.commons;
 
-import com.moho.commons.des.AESUtils;
-import com.moho.commons.des.MD5Utils;
+import com.moho.commons.secret.AESUtils;
+import com.moho.commons.secret.MD5Utils;
 import com.moho.commons.json.JsonUtils;
 import org.junit.Test;
 

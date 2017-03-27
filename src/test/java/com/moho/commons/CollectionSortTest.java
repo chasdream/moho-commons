@@ -9,12 +9,12 @@
 package com.moho.commons;
 
 import com.moho.commons.convert.Converts;
-import com.moho.commons.des.URLCodeUtils;
+import com.moho.commons.secret.URLCodeUtils;
 import com.moho.commons.json.JsonUtils;
 import com.moho.commons.model.Dog;
 import com.moho.commons.model.Person;
 import com.moho.commons.sort.CollectionSort;
-import com.moho.commons.des.MD5Utils;
+import com.moho.commons.secret.MD5Utils;
 import com.moho.commons.sort.SortUtils;
 import org.junit.Test;
 

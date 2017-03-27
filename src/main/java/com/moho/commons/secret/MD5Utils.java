@@ -6,7 +6,7 @@
  * Version: 1.0
  * Date: 2016-09-02
  */
-package com.moho.commons.des;
+package com.moho.commons.secret;
 
 import com.google.common.hash.Hashing;
 import org.apache.commons.lang.StringUtils;

@@ -5,7 +5,7 @@
  * Version: 1.0
  * Date: 2016-09-02
  */
-package com.moho.commons.des;
+package com.moho.commons.secret;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
