@@ -65,9 +65,7 @@ public final class AESUtils {
     public static byte[] encrypt(byte[] data, byte[] key) {
         try {
             Cipher cipher = cipher(key, Cipher.ENCRYPT_MODE);
-            byte[] byteData = data;
-            byte[] result = cipher.doFinal(byteData);
-            return result;
+            return cipher.doFinal(data);
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         } catch (NoSuchPaddingException e) {
@@ -92,8 +90,7 @@ public final class AESUtils {
     public static byte[] decrypt(byte[] data, byte[] key) {
         try {
             Cipher cipher = cipher(key, Cipher.DECRYPT_MODE);
-            byte[] result = cipher.doFinal(data);
-            return result;
+            return cipher.doFinal(data);
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         } catch (NoSuchPaddingException e) {
