@@ -8,18 +8,13 @@
  */
 package com.moho.commons;
 
-import com.moho.commons.convert.Converts;
 import com.moho.commons.secret.URLCodeUtils;
-import com.moho.commons.json.JsonUtils;
-import com.moho.commons.model.Dog;
-import com.moho.commons.model.Person;
 import com.moho.commons.sort.CollectionSort;
 import com.moho.commons.secret.MD5Utils;
 import com.moho.commons.sort.SortUtils;
 import org.junit.Test;
 
 import java.io.UnsupportedEncodingException;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -75,26 +70,5 @@ public class CollectionSortTest {
         String decode = URLCodeUtils.encode(str);
         System.out.println(decode);
         System.out.println(URLCodeUtils.decode(decode));
-    }
-
-    @Test
-    public void testObjectToMap() throws NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException {
-        Person person = new Person();
-        person.setName("jack");
-        person.setAge(20);
-        person.setSex("man");
-        Dog dog = new Dog();
-        dog.setDogName("bldog");
-        dog.setDogAge(10);
-        person.setDog(dog);
-
-        List<Integer> list = new ArrayList<>();
-        list.add(3);
-        list.add(5);
-        list.add(1);
-        list.add(0);
-        list.add(6);
-        person.setList(list);
-        System.out.println(JsonUtils.toJson(Converts.objectToMap(person)));
     }
 }
