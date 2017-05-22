@@ -48,11 +48,9 @@ public class JsonUtilsTest {
         Person person = JsonUtils.toObject(jsonStr, Person.class);
         System.out.println(person.toString());
     }
-
+    
     @Test
-    public void testToMap() {
-        String jsonStr = "{\"name\":\"jack\",\"sex\":\"man\",\"age\":20}";
-        Map<String, Object> map = JsonUtils.toMap(jsonStr, String.class, Object.class);
-        System.out.println(map.get("name"));
+    public void test() {
+        System.out.println("test...");
     }
 }
