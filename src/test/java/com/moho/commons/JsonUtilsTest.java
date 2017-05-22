@@ -55,4 +55,9 @@ public class JsonUtilsTest {
         Map<String, Object> map = JsonUtils.toMap(jsonStr, String.class, Object.class);
         System.out.println(map.get("name"));
     }
+    
+    @Test
+    public void test() {
+        System.out.println("f-test...解决冲突...");
+    }
 }
