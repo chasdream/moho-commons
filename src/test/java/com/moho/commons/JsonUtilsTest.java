@@ -51,11 +51,9 @@ public class JsonUtilsTest {
     
     @Test
     public void test() {
-        System.out.println("test...");
-    }
-    
-    @Test
-    public void test() {
         System.out.println("f-test...解决冲突...");
     }
+    /**
+     * 冲突文件解决方案
+     */
 }
