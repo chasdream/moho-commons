@@ -13,8 +13,8 @@ public class BASE64Utils {
     /**
      * 
      * base64编码
-     * @param b
-     * @return
+     * @param b 待处理参数
+     * @return 编码后的结果
      */
     public static String encoder(byte[] b) {
         if (null != b) {
@@ -24,6 +24,13 @@ public class BASE64Utils {
         return null;
     }
     
+    /**
+     * 
+     * base64解码
+     * @param param 待解码参数
+     * @return 解码后的结果
+     * @throws IOException 异常
+     */
     public static byte[] decoder(String param) throws IOException {
         if (null != param) {
             byte[] b = new BASE64Decoder().decodeBuffer(param);
