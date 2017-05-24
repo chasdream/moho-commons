@@ -29,8 +29,10 @@ public final class AESUtils {
     private AESUtils() {
 
     }
+    
+    private final static int LENGTH = 128;
 
-    public final static String AES = "AES";
+    private final static String AES = "AES";
 
     /**
      * 创建并初始化密码器
@@ -44,7 +46,7 @@ public final class AESUtils {
      */
     private static Cipher cipher(byte[] key, int model) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException {
         KeyGenerator gen = KeyGenerator.getInstance(AES);
-        gen.init(128, new SecureRandom(key));
+        gen.init(LENGTH, new SecureRandom(key));
         SecretKey secretKey = gen.generateKey();
         byte[] encoded = secretKey.getEncoded();
         SecretKeySpec spec = new SecretKeySpec(encoded, AES);

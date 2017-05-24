@@ -9,8 +9,16 @@
 package com.moho.commons;
 
 import com.moho.commons.secret.AESUtils;
+import com.moho.commons.secret.BASE64Utils;
 import com.moho.commons.secret.MD5Utils;
+
+import sun.misc.BASE64Decoder;
+import sun.misc.BASE64Encoder;
+
 import com.moho.commons.json.JsonUtils;
+
+import java.io.IOException;
+
 import org.junit.Test;
 
 /**
@@ -23,7 +31,7 @@ import org.junit.Test;
  * @version 1.0
  * @since 1.0
  */
-public class MD5UtilsTest {
+public class SecretTest {
 
     @Test
     public void testMd5() {
@@ -31,13 +39,24 @@ public class MD5UtilsTest {
     }
 
     @Test
-    public void testAes() {
+    public void testAes() throws IOException {
         String data = "加密";
         String key = "123456";
         System.out.println("加密前:" + data);
         byte[] aes = AESUtils.encrypt(data.getBytes(), key.getBytes());
-        System.out.println("加密后:" + JsonUtils.toJson(aes));
-        System.out.println("解密后:" + new String(AESUtils.decrypt(aes, key.getBytes())));
+        String aesStr = new BASE64Encoder().encode(aes);
+        System.out.println("加密后:" + aesStr);
+        System.out.println("解密后:" + new String(AESUtils.decrypt(new BASE64Decoder().decodeBuffer(aesStr), key.getBytes())));
+    }
+    
+    @Test
+    public void testEncode() {
+        System.out.println(BASE64Utils.encoder("123".getBytes()));
+    }
+    
+    @Test
+    public void testDecode() throws IOException {
+        System.out.println(new String(BASE64Utils.decoder("MTIz")));
     }
 
 }
