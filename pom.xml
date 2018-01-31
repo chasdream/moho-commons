@@ -5,7 +5,10 @@
     <groupId>com.moho.commons</groupId>
     <artifactId>moho-commons</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <modules>
+        <module>moho-commons-poi</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <name>moho-commons</name>
     <url>http://maven.apache.org</url>
@@ -95,18 +98,6 @@
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-core-asl</artifactId>
             <version>1.9.13</version>
-        </dependency>
-
-        <!-- redis-->
-        <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-            <version>2.9.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-redis</artifactId>
-            <version>1.7.2.RELEASE</version>
         </dependency>
 
         <dependency>
