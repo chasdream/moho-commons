@@ -8,10 +8,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.moho.commons</groupId>
-    <artifactId>moho-commons-poi</artifactId>
+    <artifactId>moho-commons-secret</artifactId>
     <packaging>jar</packaging>
 
-    <name>moho-commons-poi</name>
+    <name>moho-commons-secret</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -19,18 +19,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>3.17</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>3.17</version>
-        </dependency>
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
