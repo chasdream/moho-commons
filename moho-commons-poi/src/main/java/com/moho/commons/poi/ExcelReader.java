@@ -17,6 +17,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
@@ -63,7 +64,9 @@ public class ExcelReader {
                     break;
             }
             return workbook;
-        } catch (Exception e) {
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {
             close(workbook, inputStream);
@@ -83,7 +86,7 @@ public class ExcelReader {
     /**
      * 获取Sheet对象
      *
-     * @param file 待读取的文件对象
+     * @param file  待读取的文件对象
      * @param index 工作表位置
      * @return
      */
@@ -101,7 +104,7 @@ public class ExcelReader {
     /**
      * 获取Sheet对象
      *
-     * @param file 待读取的文件对象
+     * @param file      待读取的文件对象
      * @param sheetName 工作表名称
      * @return
      */
