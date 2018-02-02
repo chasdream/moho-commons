@@ -2,6 +2,8 @@ package com.moho.commons;
 
 import com.moho.commons.poi.ExcelReader;
 import junit.framework.TestCase;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 
@@ -19,7 +21,9 @@ public class ExcelReaderTest extends TestCase {
         for (int i = 0; i <= rowNum; i++) {
             Row row = sheet.getRow(i);
             for (int j = 0; j < row.getLastCellNum(); j++) {
-                System.out.println("第" + i + "行第" + j + "列: " + ExcelReader.getCellValue(row.getCell(j)));
+                Cell cell = row.getCell(j);
+                cell.setCellType(CellType.STRING);
+                System.out.println("第" + i + "行第" + j + "列: " + ExcelReader.getCellValue(cell));
             }
         }
 

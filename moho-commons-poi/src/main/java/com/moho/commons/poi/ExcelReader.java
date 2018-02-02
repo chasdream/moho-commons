@@ -137,8 +137,7 @@ public class ExcelReader {
             case NUMERIC://数值
                 return cell.getNumericCellValue();
             case FORMULA://公式
-                cell.setCellType(CellType.STRING);
-                return cell.getStringCellValue();
+                return cell.getCellFormula();
             case BLANK://null
                 return null;
             case BOOLEAN://boolean
