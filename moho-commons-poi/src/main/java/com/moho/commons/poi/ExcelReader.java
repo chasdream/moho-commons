@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C), 2017-2018
  * File Name: @(#)
  * Encoding UTF-8
@@ -10,7 +10,6 @@ package com.moho.commons.poi;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -164,14 +163,14 @@ public class ExcelReader {
      */
     private static void close(Workbook workbook, FileInputStream in) {
         try {
-            if (null != workbook) {
-                workbook.close();
-            }
             if (null != in) {
                 in.close();
             }
+            if (null != workbook) {
+                workbook.close();
+            }
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException("excel reader stream close exception: " + e);
         }
     }
 }
