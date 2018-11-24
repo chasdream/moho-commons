@@ -39,3 +39,13 @@
                         返回单元格值
 
 
+    
+    class: com.moho.commons.poi.ExcelWriter 生成excel文件内容
+    
+           methods: public static <T> void generatorExcel(List<T> list, Class<T> clazz, String fileName) list集合写入Excel文档
+                    param:
+                        list:写入Excel文档的数据集合
+                        clazz:待处理的对象
+                        fileName:导出文件名
+                    return:
+                        无

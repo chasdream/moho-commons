@@ -37,9 +37,9 @@ public class ExcelWriter {
     /**
      * 将list集合生成Excel文档
      *
-     * @param list
-     * @param clazz
-     * @param fileName
+     * @param list 写入Excel文档的数据集合
+     * @param clazz 待处理的对象
+     * @param fileName 导出文件名
      * @param <T>
      */
     public static <T> void generatorExcel(List<T> list, Class<T> clazz, String fileName) {
@@ -132,7 +132,6 @@ public class ExcelWriter {
             } catch (IOException e) {
                 throw new RuntimeException("excel writer stream close exception: " + e);
             }
-
         }
     }
 }
