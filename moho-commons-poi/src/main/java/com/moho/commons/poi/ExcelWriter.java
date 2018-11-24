@@ -37,8 +37,8 @@ public class ExcelWriter {
     /**
      * 将list集合生成Excel文档
      *
-     * @param list 写入Excel文档的数据集合
-     * @param clazz 待处理的对象
+     * @param list     写入Excel文档的数据集合
+     * @param clazz    待处理的对象
      * @param fileName 导出文件名
      * @param <T>
      */
@@ -67,7 +67,11 @@ public class ExcelWriter {
         //将list写入Excel文档
         if (null != list && !list.isEmpty()) {
 
-            for (T t : list) {
+            for (int i = 0; i <= list.size() - 1; i++) {
+
+                T t = list.get(i);
+
+                row = sheet.createRow(i + 1);
 
                 int valueCount = 0;
                 for (Field field : t.getClass().getDeclaredFields()) {
