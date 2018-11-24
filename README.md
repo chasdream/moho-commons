@@ -1,6 +1,6 @@
 # moho-commons
 
-1 moho-commons-poi:office操作
+1. moho-commons-poi:office操作
 
 1.1 excel操作工具(依赖poi.3.17版本):
 
@@ -37,14 +37,9 @@
                         cell:cell对象
                     return:
                         返回单元格值
-
-2 moho-commons-secret:加解密
-
-2.1 AES加解密
-
-    
+                        
     class: com.moho.commons.poi.ExcelWriter 生成excel文件内容
-    
+        
            methods: public static <T> void generatorExcel(List<T> list, Class<T> clazz, String fileName) list集合写入Excel文档
                     param:
                         list:写入Excel文档的数据集合
@@ -52,6 +47,11 @@
                         fileName:导出文件名
                     return:
                         无
+
+2. moho-commons-secret:加解密
+
+2.1 AES加解密
+    
     class:com.moho.commons.secret.AESUtils
 
           methods: public static String encrypt(String data, String key) aes加密方法
