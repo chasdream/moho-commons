@@ -21,7 +21,7 @@ import java.util.List;
 public class ExcelReaderTest extends TestCase {
 
     public void testGetSheet() {
-        File file = new File("C:\\Users\\haibo\\Desktop\\exceltest\\test.xlsx");
+        File file = new File("C:\\Users\\xxx\\Desktop\\exceltest\\test.xlsx");
         Sheet sheet = ExcelReader.getSheet(file);
         int rowNum = sheet.getLastRowNum();
         for (int i = 0; i <= rowNum; i++) {
